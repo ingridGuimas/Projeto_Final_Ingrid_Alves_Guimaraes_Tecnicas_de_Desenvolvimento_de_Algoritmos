@@ -37,7 +37,6 @@ O projeto foi desenvolvido com foco no aprendizado de:
 ---
 
 ## Tecnologias Utilizadas
-
 - PHP
 - MySQL
 - HTML5
@@ -55,7 +54,7 @@ O projeto foi desenvolvido com foco no aprendizado de:
 
 4. Inicie os serviços **Apache** e **MySQL**.
 
-5. Acesse o sistema pelo navegador: http://localhost/Projeto_final_programcao_web/
+5. Acesse o sistema pelo navegador: http://localhost/biblioteca/
 
 ---
 
@@ -90,13 +89,91 @@ Esse modelo permite um fluxo simples, modular e fácil de manter.
 
 ## Fluxograma Geral do Sistema
 
+![Fluxograma Geral](https://github.com/ingridGuimas/Projeto_Final_Ingrid_Alves_Guimaraes_Tecnicas_de_Desenvolvimento_de_Algoritmos/blob/main/fluxograma_geral.png)
 
+---
+
+## Pseudocódigo dos Principais CRUDs
+
+### Cadastrar Usuário
+
+INÍCIO
+- Receber nome, email, telefone, endereço e data de nascimento
+- Conectar ao banco de dados
+- Executar INSERT na tabela usuario
+- SE operação bem-sucedida
+      - Exibir mensagem de sucesso
+  SENÃO
+      Exibir mensagem de erro
+
+FIM
+
+### Editar Usuário
+
+INÍCIO
+- Receber o ID do usuário
+- Receber dados atualizados
+- Executar UPDATE na tabela usuario
+- SE operação bem-sucedida
+      Exibir mensagem de sucesso
+  SENÃO
+      Exibir mensagem de erro
+ FIM
+
+### Excluir Usuário
+INÍCIO
+- Receber o ID do usuário
+- Executar DELETE na tabela usuario
+- SE operação bem-sucedida
+      Exibir mensagem de sucesso
+  SENÃO
+      Exibir mensagem de erro
+
+FIM
+
+### Cadastrar Livro
+
+INÍCIO
+- Receber título, ano e gênero
+- Conectar ao banco
+- Executar INSERT na tabela livro
+- Mostrar mensagem para o usuário
+FIM
+
+### Cadastrar Reserva
+
+INÍCIO
+
+- Receber id_usuario e id_livro
+- Verificar se o livro está disponível
+- SE disponível
+      - Inserir reserva na tabela reserva
+      - Exibir sucesso
+  SENÃO
+      - Informar indisponibilidade
+
+  FIM
+
+---
+
+## Estrutura de Pastas
+
+- biblioteca/
+- usuario/
+- livro/
+- reserva/
+- css/
+- js/
+- database/
+- index.php
+- config.php
+- README.md
+
+---
 
 ## Autora
 
 **Ingrid Guimarães**  
-Disciplina: *Programação Web*  
-Professor: *Eliel Cruz*
 
 
 
