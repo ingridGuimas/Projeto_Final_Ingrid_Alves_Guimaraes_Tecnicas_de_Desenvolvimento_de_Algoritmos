@@ -97,62 +97,73 @@ Esse modelo permite um fluxo simples, modular e fácil de manter.
 
 ### Cadastrar Usuário
 
+```
 INÍCIO
 - Receber nome, email, telefone, endereço e data de nascimento
 - Conectar ao banco de dados
 - Executar INSERT na tabela usuario
-- SE operação bem-sucedida
-      - Exibir mensagem de sucesso
-  SENÃO
-      Exibir mensagem de erro
-
+SE operação bem-sucedida
+- Exibir mensagem de sucesso
+SENÃO
+- Exibir mensagem de erro
 FIM
+```
+
 
 ### Editar Usuário
 
+```
 INÍCIO
 - Receber o ID do usuário
 - Receber dados atualizados
 - Executar UPDATE na tabela usuario
-- SE operação bem-sucedida
-      Exibir mensagem de sucesso
-  SENÃO
-      Exibir mensagem de erro
- FIM
+SE operação bem-sucedida
+- Exibir mensagem de sucesso
+SENÃO
+- Exibir mensagem de erro
+FIM
+```
+
 
 ### Excluir Usuário
+
+```
 INÍCIO
 - Receber o ID do usuário
 - Executar DELETE na tabela usuario
-- SE operação bem-sucedida
-      Exibir mensagem de sucesso
-  SENÃO
-      Exibir mensagem de erro
-
+SE operação bem-sucedida
+- Exibir mensagem de sucesso
+SENÃO
+- Exibir mensagem de erro
 FIM
+```
+
 
 ### Cadastrar Livro
 
+```
 INÍCIO
 - Receber título, ano e gênero
 - Conectar ao banco
 - Executar INSERT na tabela livro
 - Mostrar mensagem para o usuário
 FIM
+```
 
 ### Cadastrar Reserva
 
+```
 INÍCIO
-
 - Receber id_usuario e id_livro
 - Verificar se o livro está disponível
-- SE disponível
-      - Inserir reserva na tabela reserva
-      - Exibir sucesso
-  SENÃO
-      - Informar indisponibilidade
+SE Disponível
+- Inserir reserva na tabela reserva
+- Exibir sucesso
+SENÃO
+- Informar indisponibilidade
+FIM
+```
 
-  FIM
 
 ---
 
